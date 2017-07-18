@@ -23,7 +23,7 @@ define([
     });*/
 
     // url to your geometry server.
-    esriConfig.defaults.geometryService = new GeometryService('https://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer');
+    esriConfig.defaults.geometryService = new GeometryService('https://10.10.11.94:6443/arcgis/rest/services/Utilities/Geometry/GeometryServer');
 
     // Use your own Google Maps API Key.
     // https://developers.google.com/maps/documentation/javascript/get-api-key
@@ -78,7 +78,7 @@ define([
         // map options, passed to map constructor. see: https://developers.arcgis.com/javascript/jsapi/map-amd.html#map1
         mapOptions: {
             basemap: 'streets',
-            center: [-96.59179687497497, 39.09596293629694],
+            center: [123, 45],
             zoom: 5,
             sliderStyle: 'small'
         },
@@ -152,10 +152,10 @@ define([
         // 3 'mode' options: MODE_SNAPSHOT = 0, MODE_ONDEMAND = 1, MODE_SELECTION = 2
         operationalLayers: [{
             type: 'feature',
-            url: 'https://services1.arcgis.com/6bXbLtkf4y11TosO/arcgis/rest/services/Restaurants/FeatureServer/0',
+            url: 'https://10.10.11.94:6443/arcgis/rest/services/HLJwetland/Heilongjiangwetland/FeatureServer/0',
             title: i18n.viewer.operationalLayers.restaurants,
             options: {
-                id: 'restaurants',
+                id: 'HLJwetlands',
                 opacity: 1.0,
                 visible: true,
                 outFields: ['*'],
@@ -175,13 +175,13 @@ define([
             }
         }, {
             type: 'feature',
-            url: 'https://sampleserver6.arcgisonline.com/ArcGIS/rest/services/SF311/FeatureServer/0',
+            url: 'https://10.10.11.94:6443/arcgis/rest/services/HLJwetland/Heilongjiangwetland/FeatureServer/0',
             title: i18n.viewer.operationalLayers.sf311Incidents,
             options: {
                 id: 'sf311Incidents',
                 opacity: 1.0,
                 visible: false,
-                outFields: ['req_type', 'req_date', 'req_time', 'address', 'district'],
+                outFields: ['*'],
                 mode: 0
             },
             layerControlLayerInfos: {
@@ -194,7 +194,7 @@ define([
             }
         }, {
             type: 'dynamic',
-            url: 'https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/PublicSafety/PublicSafetyOperationalLayers/MapServer',
+            url: 'https://10.10.11.94:6443/arcgis/rest/services/HLJwetland/Heilongjiangwetland/MapServer',
             title: i18n.viewer.operationalLayers.louisvillePubSafety,
             options: {
                 id: 'louisvillePubSafety',

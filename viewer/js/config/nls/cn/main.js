@@ -1,6 +1,5 @@
 // http://dojotoolkit.org/reference-guide/1.10/dojo/i18n.html
 define({
-    root: {
         basemaps: {
             davidRumseyMap1812: 'David Rumsey 1812',
             earthAtNight: 'Earth at Night',
@@ -29,8 +28,8 @@ define({
                 sf311Incidents: 'San Francisco 311 Incidents'
             },
             titles: {
-                header: '保护区GIS系统',
-                pageTitle: 'NNR GIS Demo',
+                header: 'NNR GIS Demo',
+                pageTitle: '保护区GIS系统',
                 subHeader: '演示系统'
             },
             widgets: {
@@ -50,10 +49,5 @@ define({
                 streetview: 'Google街道图'
             }
         }
-    },
-    'es': true,
-    'fr': true,
-    'pt-br': true,
-    'pt-pt': true,
-	'cn':true
+    
 });
